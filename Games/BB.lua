@@ -32,7 +32,7 @@ local BanCommands = {
 local Window = Parvus.Utilities.UI:Window({
     Name = "Lay V1.3 — "..Parvus.Game,
     Position = UDim2.new(0.05,0,0.5,-248)
-    }) do Window:Watermark({Enabled = true})
+    }) do Window:Watermark({Enabled = false})
 
     local AimAssistTab = Window:Tab({Name = "Combat"}) do
         local AimbotSection = AimAssistTab:Section({Name = "Aimbot",Side = "Left"}) do
@@ -315,7 +315,7 @@ Window:LoadDefaultConfig()
 Window:SetValue("Background/Offset",296)
 Window:SetValue("UI/Toggle",Window.Flags["UI/OOL"])
 
-Parvus.Utilities.Misc:SetupWatermark(Window)
+
 Parvus.Utilities.Drawing:SetupCursor(Window.Flags)
 
 Parvus.Utilities.Drawing:FOVCircle("Aimbot",Window.Flags)
