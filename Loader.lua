@@ -38,7 +38,7 @@ local function GetScript(Script)
 end
 
 local function LoadScript(Script)
-    return loadstring(Parvus.Debug and readfile("LayV1.3/" .. Script .. ".lua")
+    return loadstring(Parvus.Debug and readfile("lay/" .. Script .. ".lua")
     or game:HttpGetAsync(("%s%s.lua"):format(Parvus.Domain,Script)))()
 end
 
