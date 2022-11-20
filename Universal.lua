@@ -8,9 +8,9 @@ local LocalPlayer = PlayerService.LocalPlayer
 local Aimbot,SilentAim,Trigger = false,nil,nil
 
 local Window = Parvus.Utilities.UI:Window({
-    Name = "🎃 Parvus Hub — "..Parvus.Game,
+    Name = "Lay — "..Parvus.Game,
     Position = UDim2.new(0.05,0,0.5,-248)
-    }) do Window:Watermark({Enabled = true})
+    }) do Window:Watermark({Enabled = false})
 
     local AimAssistTab = Window:Tab({Name = "Combat"}) do
         local GlobalSection = AimAssistTab:Section({Name = "Global",Side = "Left"}) do
@@ -256,7 +256,7 @@ local Window = Parvus.Utilities.UI:Window({
             CrosshairSection:Slider({Name = "Gap",Flag = "Mouse/Crosshair/Gap",Min = 0,Max = 10,Value = 2})
         end
         local CreditsSection = SettingsTab:Section({Name = "Credits",Side = "Right"}) do
-            CreditsSection:Label({Text = "This script was made by AlexR32#0157"})
+            CreditsSection:Label({Text = "This script was made by Doom#1337"})
             CreditsSection:Divider()
             CreditsSection:Label({Text = "Thanks to Jan for awesome Background Patterns"})
             CreditsSection:Label({Text = "Thanks to Infinite Yield Team for Server Hop and Rejoin"})
@@ -272,7 +272,6 @@ Window:LoadDefaultConfig()
 Window:SetValue("Background/Offset",296)
 Window:SetValue("UI/Toggle",Window.Flags["UI/OOL"])
 
-Parvus.Utilities.Misc:SetupWatermark(Window)
 Parvus.Utilities.Misc:SetupLighting(Window.Flags)
 Parvus.Utilities.Drawing:SetupCursor(Window.Flags)
 
