@@ -7,7 +7,7 @@ local TeamService = game:GetService("Teams")
 
 if game.PlaceVersion > 1317 then
     local Loaded,PromptLib = false,loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/Useful/PromptLibrary.lua"))()
-    PromptLib("Unsupported game version","You are at risk of getting autoban\nAre you sure you want to load V1.3",{
+    PromptLib("Unsupported Script Version","You are at risk of getting autoban\nAre you sure you want to load V1.3",{
         {Text = "Yes",LayoutOrder = 0,Primary = false,Callback = function() Loaded = true end},
         {Text = "No",LayoutOrder = 0,Primary = true,Callback = function() end}
     }) repeat task.wait(1) until Loaded
