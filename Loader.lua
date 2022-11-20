@@ -33,7 +33,7 @@ local function Concat(Array,Separator)
 end
 
 local function GetScript(Script)
-    return Parvus.Debug and readfile("LayV1.3/" .. Script .. ".lua")
+    return Parvus.Debug and readfile("lay" .. Script .. ".lua")
     or game:HttpGetAsync(("%s%s.lua"):format(Parvus.Domain,Script))
 end
 
@@ -43,7 +43,7 @@ local function LoadScript(Script)
 end
 
 getgenv().Parvus = {Debug = LoadArgs[1],Utilities = {},
-    Domain = "https://raw.githubusercontent.com/afourteenn/LayV1.3//main/",Games = {
+    Domain = "https://raw.githubusercontent.com/afourteenn/lay//main/",Games = {
     --    ["Universal" ] = {Name = "Universal",                 Script = "Universal" },
         ["1168263273"] = {Name = "Bad Business",              Script = "Games/BB"  },
       --  ["1586272220"] = {Name = "Steel Titans",              Script = "Games/ST"  },
@@ -63,7 +63,7 @@ local SupportedGame = GetSupportedGame()
 LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
         QueueOnTeleport(([[local LoadArgs = {%s}
-        loadstring(LoadArgs[1] and readfile("LayV1.3/Loader.lua") or
+        loadstring(LoadArgs[1] and readfile("lay/Loader.lua") or
         game:HttpGetAsync("%sLoader.lua"))(unpack(LoadArgs))
         ]]):format(Concat(LoadArgs,","),Parvus.Domain))
     end
