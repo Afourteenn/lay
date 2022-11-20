@@ -5,7 +5,7 @@ Free Roblox Script Hub designed for shooters.
 Made With :heart: By ***Doom#1337 credit to AlexR32#0157 for original idea***  
 ### Loadstring
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/afourteenn/lay/main/Loader.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/afourteenn/lay/main/loadstring.lua", true))()
 ```
 ### Supported Games
 - [Bad Business](https://www.roblox.com/games/3233893879/)
